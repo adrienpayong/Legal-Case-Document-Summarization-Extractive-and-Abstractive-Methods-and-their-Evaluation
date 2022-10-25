@@ -129,8 +129,7 @@ noted by Legal-Pegasus (IN-Ext and IN-Abs) and BART_MCS (UK-Abs).
 
 **Segment-wise Evaluation (Tables 6, 7)**: None of the methods performs well across all segments, and fine-tuning generally improves perfor-
 mance. Interestingly, though Legal-LED performs poorly with respect to document-wide ROUGE scores, it shows better performance in segment-wise evaluation – it gives the best performance in the FAC and ARG segments of IN-Ext and in 2 out of the 3 segments of UK-Abs.
-Overall performance on long legal case docu-
-ments:
+Overall performance on long legal case documents:
 
 
 
