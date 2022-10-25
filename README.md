@@ -114,13 +114,23 @@ Out of these, the researchers find MCS to perform the best.
 
 ## Evaluation of Extractive methods
 
-**Overall Evaluation (Tables 3–5)**: Among the pretrained models, Legal-Pegasus generates the best summaries (Table 3), followed by BART-based
-methods. This is expected, since Legal-Pegasus is pre-trained on legal documents. This short doc- ument summarizer, when used with chunking to
-handle long documents, notably outperforms Legal-LED, which is meant for long documents. For IN-Ext dataset, BERT_BART performs the best maybe
-due to extractive nature of the summaries.
+**Overall Evaluation (Tables 3–5)**: Among the unsupervised general methods, Luhn (on IN-Ext) and DSDR (on IN-Abs and UK-Abs) show the best per-
+formances. Among the unsupervised legal-specific methods, CaseSummarizer performs the best on both In-Abs and UK-Abs datasets, while LetSum performs the best on IN-Ext. Among supervised extractive methods, SummaRuNNer performs the best across both domain-independent and domain-specific categories, on the IN-Abs and UK-Abs datasets. BERT-Ext is the best performing model on the IN-Ext dataset.
 
 **Segment-wise Evaluation (Tables 6, 7)**: None of the methods performs well across all segments, and fine-tuning generally improves perfor-
-mance. Interestingly, though Legal-LED performs poorly with respect to document-wide ROUGE scores, it shows better performance in segment-wise evaluation – it gives the best performance in the FAC and ARG segments of IN-Ext and in 2 out of the 3 segments of UK-Abs
+Table 6 and Table 7 show the segment-wise ROUGE-L Recall scores of some of the best performing methods on the IN-Ext
+and UK-Abs datasets respectively.
+
+## Evaluation of Abstractive methods
+
+**Overall Evaluation (Tables 3–5)**: Among the pretrained models, Legal-Pegasus generates the best summaries (Table 3), followed by BART-based methods. This is expected, since Legal-Pegasus is pre-trained on legal documents.This short document summarizer, when used with chunking to handle long documents, notably outperforms Legal- LED, which is meant for long documents. For IN-Ext dataset, BERT_BART performs the best maybe
+due to extractive nature of the summaries. All models show notable improvement through fine-tuning. Overall, the best performances are
+noted by Legal-Pegasus (IN-Ext and IN-Abs) and BART_MCS (UK-Abs).
+
+**Segment-wise Evaluation (Tables 6, 7)**: None of the methods performs well across all segments, and fine-tuning generally improves perfor-
+mance. Interestingly, though Legal-LED performs poorly with respect to document-wide ROUGE scores, it shows better performance in segment-wise evaluation – it gives the best performance in the FAC and ARG segments of IN-Ext and in 2 out of the 3 segments of UK-Abs.
+Overall performance on long legal case docu-
+ments:
 
 
 
