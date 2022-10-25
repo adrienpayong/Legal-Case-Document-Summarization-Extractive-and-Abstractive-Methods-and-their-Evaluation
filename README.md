@@ -133,13 +133,19 @@ noted by Legal-Pegasus (IN-Ext and IN-Abs) and BART_MCS (UK-Abs).
 
 **Segment-wise Evaluation (Tables 6, 7)**: None of the methods performs well across all segments, and fine-tuning generally improves perfor-
 mance. Interestingly, though Legal-LED performs poorly with respect to document-wide ROUGE scores, it shows better performance in segment-wise evaluation – it gives the best performance in the FAC and ARG segments of IN-Ext and in 2 out of the 3 segments of UK-Abs.
+
 **Overall performance on long legal case documents**: The researchers experimented with three approaches for summarizing long documents:
 - models with modified attention mechanism such as Legal-LED
 - methods based on chunking the documents
 - reducing the size of the input by initial
 extractive summarization and then going for ab stractive summarization (BERT_BART). When they see the overall (document-wide) ROUGE scores,
-Legal-Pegasus and BART (when used along with chunking), are seen to perform the best, followed by BERT_BART. However for segment-wise per-
-formances Legal-LED shows greater potential.
+Legal-Pegasus and BART (when used along with chunking), are seen to perform the best, followed by BERT_BART. However for segment-wise performances Legal-LED shows greater potential.
+
+## Results (Table 8): 
+
+According to the Law experts, important information (Imp. Inf.) could be covered best by DSDR, followed by CaseSummarizer and SummaRuNNer. In terms of readability (Read.) as well, DSDR, CaseSummarizer and SummaRuNNer have higher mean scores than others. Finally, through the Overall ratings, we understand that DSDR is of higher satisfaction to the Law practiioners than the other algorithms, with CaseSum coming second. 
+
+![source](https://github.com/adrienpayong/object-detection/blob/main/table8.png)
 
 
 
