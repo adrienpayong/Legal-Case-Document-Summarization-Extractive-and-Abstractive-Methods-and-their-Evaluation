@@ -92,6 +92,17 @@ equally divide the target summary length among all the chunks. Finally, we appen
 **Hybrid extractive-abstractive approach**: First, the document length is reduced by selecting salient sentences using a BERT-based extractive summarization model. Then a BART model is used to generate the final summary (Bajaj et al., 2021). Since, in our case, we often require a summary length greater than
 1024, we use a chunking-based BART (rather than pre-trained BART) in the second step. The researchers call this model BERT_BART.
 
+## Generating finetuning data
+
+Finetuning supervised models needs a large set of doc-summary pairs. However, the considered models (apart from Longformer) have a restricted input limit which is lesser than the length of documents in our datasets. Hence, the researchers use the following method, inspired from Gidiotis and Tsoumakas (2020), to generate finetuning data for chunking based summarization.
+
+- Consider (d, s) to be a (training document, reference summary) pair. When d is segmented into n chunks d1, d2, ... dn, it is not logical for the same
+s to be the reference summary for each chunk di.
+- To generate a suitable reference summary si for each chunk di, first we map every sentence in s to the most similar sentence in d.
+- For every chunk di, we combine all sentences in s which are mapped to any of the sentences in di, and consider those sentences as
+the summary si (of di). 
+- Following this procedure from each document, we get a large number of (di, si) pairs which are then used for finetuning.
+
 
 
 
