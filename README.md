@@ -77,6 +77,20 @@ The researchers consider some representative methods from four classes of extrac
 - SummaRuNNer
 - BERTSum.
 
+**Training supervised extractive models**:
+- he supervised methods (Gist, SummaRuNNer and BERTSUM) require labelled training data, where every sentence must be labeled as 1 if the sentence is suitable for inclusion in the summary, and 0 otherwise.
+- The researchers explore three methods – Maximal, Avr, and TF-IDF – for converting the abstractive summaries to their extractive counterparts. Best performances for the supervised methods are observed when the training data is generated through the Avr method.
+
+## Abstractive Summarization Methods
+**Models meant for short documents**: The researchers consider Legal-Pegasus (leg) which is already pretrained on legal documents, and BART (Lewis et al., 2020) (max input length of 1024 tokens). They use their pre-trained versions from the HuggingFace library.
+
+**Chunking-based approach**: They first divide a document into small chunks, the size of each chunk being the maximum number of tokens (say, n) that a model is designed/pre-trained to accept without truncating (e.g., n = 1024 for BART). Specifically, the first n tokens (without breaking sentences) go to the first chunk, the next n tokens go to the second chunk, and so on. Then we use a model to summarize every chunk. For a given document, we
+equally divide the target summary length among all the chunks. Finally, we append the generated summaries for each chunk in sequence.
+
+**Models meant for long documents**: Models like Longformer (LED) (Beltagy et al., 2020) have been especially designed to handle long documents (input capacity = 16,384 tokens), by in- cluding an attention mechanism that scales linearly with sequence length. We use Legal-LED specifi- cally finetuned on legal data. The model could accommodate most case documents fully. 
+
+
+
 
 # Citation
 If you are using the implementations, please refer to the following papers:
