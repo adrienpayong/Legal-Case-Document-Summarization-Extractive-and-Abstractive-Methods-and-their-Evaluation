@@ -109,7 +109,7 @@ the summary si (of di).
   - Smooth Inverse Frequency (SIF)
   - Cosine similarity between BERT [CLS] token embeddings (CLS)
   - MCS_RR which incorporates rhetorical role information. 
-
+Out of these, the researchers find MCS to perform the best.
 
 
 
