@@ -117,11 +117,14 @@ Out of these, the researchers find MCS to perform the best.
 **Overall Evaluation (Tables 3–5)**: Among the unsupervised general methods, Luhn (on IN-Ext) and DSDR (on IN-Abs and UK-Abs) show the best per-
 formances. Among the unsupervised legal-specific methods, CaseSummarizer performs the best on both In-Abs and UK-Abs datasets, while LetSum performs the best on IN-Ext. Among supervised extractive methods, SummaRuNNer performs the best across both domain-independent and domain-specific categories, on the IN-Abs and UK-Abs datasets. BERT-Ext is the best performing model on the IN-Ext dataset.
 
+
 ![source](https://github.com/adrienpayong/object-detection/blob/main/im1.png)
 
 **Segment-wise Evaluation (Tables 6, 7)**: None of the methods performs well across all segments, and fine-tuning generally improves perfor-
 Table 6 and Table 7 show the segment-wise ROUGE-L Recall scores of some of the best performing methods on the IN-Ext
 and UK-Abs datasets respectively.
+
+![source](https://github.com/adrienpayong/object-detection/blob/main/im1.png)
 
 ## Evaluation of Abstractive methods
 
@@ -132,6 +135,8 @@ noted by Legal-Pegasus (IN-Ext and IN-Abs) and BART_MCS (UK-Abs).
 **Segment-wise Evaluation (Tables 6, 7)**: None of the methods performs well across all segments, and fine-tuning generally improves perfor-
 mance. Interestingly, though Legal-LED performs poorly with respect to document-wide ROUGE scores, it shows better performance in segment-wise evaluation – it gives the best performance in the FAC and ARG segments of IN-Ext and in 2 out of the 3 segments of UK-Abs.
 Overall performance on long legal case documents:
+
+![source](https://github.com/adrienpayong/object-detection/blob/main/im2.png)
 
 
 
