@@ -103,6 +103,13 @@ s to be the reference summary for each chunk di.
 the summary si (of di). 
 - Following this procedure from each document, we get a large number of (di, si) pairs which are then used for finetuning.
 
+## Sentence similarity measures for generating fine-tuning data
+  The researchers experiment with several techniques for measuring sentence similarity between two sentences:
+  - Mean Cosine Similarity (MCS)
+  - Smooth Inverse Frequency (SIF)
+  - Cosine similarity between BERT [CLS] token embeddings (CLS)
+  - MCS_RR which incorporates rhetorical role information. 
+
 
 
 
