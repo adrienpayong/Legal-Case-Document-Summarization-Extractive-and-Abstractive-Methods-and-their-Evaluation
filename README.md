@@ -89,6 +89,9 @@ equally divide the target summary length among all the chunks. Finally, we appen
 
 **Models meant for long documents**: Models like Longformer (LED) (Beltagy et al., 2020) have been especially designed to handle long documents (input capacity = 16,384 tokens), by in- cluding an attention mechanism that scales linearly with sequence length. We use Legal-LED specifi- cally finetuned on legal data. The model could accommodate most case documents fully. 
 
+**Hybrid extractive-abstractive approach**: First, the document length is reduced by selecting salient sentences using a BERT-based extractive summarization model. Then a BART model is used to generate the final summary (Bajaj et al., 2021). Since, in our case, we often require a summary length greater than
+1024, we use a chunking-based BART (rather than pre-trained BART) in the second step. The researchers call this model BERT_BART.
+
 
 
 
