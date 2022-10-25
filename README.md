@@ -109,7 +109,18 @@ the summary si (of di).
   - Smooth Inverse Frequency (SIF)
   - Cosine similarity between BERT [CLS] token embeddings (CLS)
   - MCS_RR which incorporates rhetorical role information. 
+  
 Out of these, the researchers find MCS to perform the best.
+
+## Evaluation of Extractive methods
+
+**Overall Evaluation (Tables 3–5)**: Among the pretrained models, Legal-Pegasus generates the best summaries (Table 3), followed by BART-based
+methods. This is expected, since Legal-Pegasus is pre-trained on legal documents. This short doc- ument summarizer, when used with chunking to
+handle long documents, notably outperforms Legal-LED, which is meant for long documents. For IN-Ext dataset, BERT_BART performs the best maybe
+due to extractive nature of the summaries.
+
+**Segment-wise Evaluation (Tables 6, 7)**: None of the methods performs well across all segments, and fine-tuning generally improves perfor-
+mance. Interestingly, though Legal-LED performs poorly with respect to document-wide ROUGE scores, it shows better performance in segment-wise evaluation – it gives the best performance in the FAC and ARG segments of IN-Ext and in 2 out of the 3 segments of UK-Abs
 
 
 
