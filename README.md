@@ -1,4 +1,4 @@
-# Legal Case Document Summarization: Extractive and Abstractive Methods and their Evaluation
+# Review — Legal Case Document Summarization: Extractive and Abstractive Methods and their Evaluation
 ## Introduction
 
 In Common Law systems, law practitioners have to read through hundreds of case judgements/rulings in order to identify relevant cases that they can cite as prece- dents in an ongoing case. This is a time-consuming process as case documents are generally very long and complex. Thus, automatic summarization of
