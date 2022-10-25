@@ -133,7 +133,13 @@ noted by Legal-Pegasus (IN-Ext and IN-Abs) and BART_MCS (UK-Abs).
 
 **Segment-wise Evaluation (Tables 6, 7)**: None of the methods performs well across all segments, and fine-tuning generally improves perfor-
 mance. Interestingly, though Legal-LED performs poorly with respect to document-wide ROUGE scores, it shows better performance in segment-wise evaluation – it gives the best performance in the FAC and ARG segments of IN-Ext and in 2 out of the 3 segments of UK-Abs.
-Overall performance on long legal case documents:
+**Overall performance on long legal case documents**: The researchers experimented with three approaches for summarizing long documents:
+- models with modified attention mechanism such as Legal-LED
+- methods based on chunking the documents
+- reducing the size of the input by initial
+extractive summarization and then going for ab stractive summarization (BERT_BART). When they see the overall (document-wide) ROUGE scores,
+Legal-Pegasus and BART (when used along with chunking), are seen to perform the best, followed by BERT_BART. However for segment-wise per-
+formances Legal-LED shows greater potential.
 
 
 
