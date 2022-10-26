@@ -141,7 +141,7 @@ mance. Interestingly, though Legal-LED performs poorly with respect to document-
 extractive summarization and then going for ab stractive summarization (BERT_BART). When they see the overall (document-wide) ROUGE scores,
 Legal-Pegasus and BART (when used along with chunking), are seen to perform the best, followed by BERT_BART. However for segment-wise performances Legal-LED shows greater potential.
 
-## Results (Table 8): 
+## Results (Table 8)
 
 According to the Law experts, important information (Imp. Inf.) could be covered best by DSDR, followed by CaseSummarizer and SummaRuNNer. In terms of readability (Read.) as well, DSDR, CaseSummarizer and SummaRuNNer have higher mean scores than others. Finally, through the Overall ratings, we understand that DSDR is of higher satisfaction to the Law practiioners than the other algorithms, with CaseSum coming second. 
 
